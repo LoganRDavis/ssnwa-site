@@ -341,7 +341,6 @@ header nav a:hover { color:#E30606; }
 	opacity: 0; 
 	height: 0;
 	width: 0;
-	overflow: hidden;
 	transition: 0.25s;
 	z-index: 5;
 }
