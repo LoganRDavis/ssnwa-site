@@ -1,0 +1,9 @@
+Icon:
+6A8643 - olivedrab
+E30606 - red
+919397 - lightslategray
+505543 - darkolivegreen
+
+Text:
+C91212 - firebrick
+7C8474 - gray

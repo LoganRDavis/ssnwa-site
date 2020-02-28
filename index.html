@@ -2,39 +2,72 @@
 <html class="no-js" lang="">
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
+	<div id="headContent"></div>
+	<title>SouthernScapes NWA</title>
+	<meta name="description"
+		content="SouthernScapes Landscape & Irrigation is a landscape company that caters to all sides of the landscaping world. From irrigation repairs to patios, SouthernScapes does it all.">
 </head>
 
 <body>
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
+	<div id="preloader" style="width:100%;height:100%;position:absolute;z-index:999;;background-color:white;">
+		<img src="images/animated-icon.gif"
+			style="width:150px;height:150px;position:fixed;top:50vh;left:50vw;margin-top:-75px;margin-left:-75px;">
+	</div>
 
-  <h1>Site Coming Soon!</h1>
-  
-  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+	<div class="main-container" style="display: none;">
+		<header>
+			<div id="headerContent"></div>
+		</header>
 
-  <!-- Google Analytics: -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+		<section>
+			<div class="full-width-image-container">
+				<img src="/images/lake-retaining-wall.jpg" class="full-width-image">
+			</div>
+			<div class="services">
+				<div class="service">
+					<div class="service-content">
+						<img src="images/icon-white.png">
+						<h2>Commercial</h2>
+						<p>Landscaping to represent your business</p>
+						<button onclick="document.location.href = '/commercial.html';">Learn More</button>
+					</div>
+					<img src="images/commercial-services.jpg" class="service-background">
+				</div>
+				<div class="service">
+					<div class="service-content">
+						<img src="images/icon-white.png">
+						<h2>Residential</h2>
+						<p>Landscaping you'll love to come home to</p>
+						<button onclick="document.location.href = '/residential.html';">Learn More</button>
+					</div>
+					<img src="images/residential-services.jpg" class="service-background">
+				</div>
+			</div>>
+			<div class="full-width-image-container">
+				<img src="/images/pool-retaining-wall.jpg" class="full-width-image">
+			</div>
+			<div class="text-content">
+				<h4>SouthernScapes Does It All</h4>
+				<p>SouthernScapes Landscape & Irrigation is a landscape company that caters to all sides of the landscaping
+					world. From irrigation repairs to patios, SouthernScapes does it all across Northwest Arkansas .</p>
+				<button onclick="document.location.href = '/contact.html';">Contact Us</button>
+			</div>
+			<div class="full-width-image-container">
+				<img src="/images/fountains.jpg" class="full-width-image">
+			</div>
+		</section>
+
+		<footer>
+			<div id="footerContent"></div>
+		</footer>
+	</div>
+
+	<script src="js/vendor/modernizr-3.8.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

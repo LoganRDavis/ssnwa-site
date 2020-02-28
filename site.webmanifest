@@ -1,12 +1,16 @@
 {
-  "short_name": "",
-  "name": "",
-  "icons": [{
-    "src": "icon.png",
-    "type": "image/png",
-    "sizes": "192x192"
-  }],
-  "start_url": "/?utm_source=homescreen",
-  "background_color": "#fafafa",
-  "theme_color": "#fafafa"
+	"short_name": "SC Home",
+	"name": "SouthernScapes",
+	"description": "Landscape & Irrigation design and installs.",
+	"display": "standalone",
+	"icons": [
+		{
+			"src": "icon-192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		}
+	],
+	"start_url": "/",
+	"background_color": "#ffffff",
+	"theme_color": "#6a8643"
 }

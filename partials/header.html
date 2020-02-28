@@ -1,0 +1,42 @@
+<div>
+	<a href="/"><img class="header-logo" src="/images/logo-horizontal.svg"></a>
+</div>
+
+<div class="hamburger-icon" onclick="hamburgerIconClick()">
+	<div class="bar1"></div>
+	<div class="bar2"></div>
+	<div class="bar3"></div>
+</div>
+
+<div class="desktop-menu">
+	<nav>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/commercial.html">Commercial</a></li>
+			<li><a href="/residential.html">Residential</a></li>
+			<li><a href="/about.html">About</a></li>
+			<li><a href="/contact.html">Contact</a></li>
+			<li><a href="https://www.facebook.com/pg/southernscapesnwa/reviews/?ref=page_internal"><img
+						src="/images/facebook-logo.png" style="max-width: unset;"></a></li>
+		</ul>
+	</nav>
+</div>
+
+<div class="mobile-menu-container" id="mobile-menu-container">
+	<div class="mobile-menu-outside" onclick="hamburgerIconClick()"></div>
+	<div class="mobile-menu" id="mobile-menu">
+		<nav class="mobile-menu-nav">
+			<ul>
+				<li class="mobile-menu-li"><a href="/">Home</a></li>
+				<li class="mobile-menu-li"><a href="/commercial.html">Commercial</a></li>
+				<li class="mobile-menu-li"><a href="/residential.html">Residential</a></li>
+				<li class="mobile-menu-li"><a href="/about.html">About</a></li>
+				<li class="mobile-menu-li"><a href="/contact.html">Contact</a></li>
+				<li><a href="https://www.facebook.com/pg/southernscapesnwa/reviews/?ref=page_internal"><img
+							src="/images/facebook-logo.png" style="max-width: unset;"></a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+<script> function hamburgerIconClick() { document.getElementById('headerContent').classList.toggle("hamburger-icon-click"); }</script>
