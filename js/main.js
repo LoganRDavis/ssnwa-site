@@ -1,10 +1,3 @@
-
-const headContentPromise = new Promise((resolve) => {
-	$('#headContent').load('/partials/head.html', () => {
-		resolve();
-	});
-});
-
 const headerContentPromise = new Promise((resolve) => {
 	$('#headerContent').load('/partials/header.html', () => {
 		resolve();
@@ -17,7 +10,7 @@ const footerContentPromise = new Promise((resolve) => {
 	});
 });
 
-Promise.all([headContentPromise, headerContentPromise]).then(function () {
+Promise.all([headerContentPromise]).then(function () {
 	$(document).ready(function () {
 		setTimeout(() => {
 			$('.main-container').show();
