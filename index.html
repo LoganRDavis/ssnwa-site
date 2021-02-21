@@ -41,24 +41,6 @@
 </head>
 
 <body>
-	<div id="preloader" style="display:none;width:100%;height:100%;position:absolute;z-index:999;;background-color:white;">
-		<img src="images/animated-icon.gif"
-			style="width:150px;height:150px;position:fixed;top:50vh;left:50vw;margin-top:-75px;margin-left:-75px;"
-			alt="SouthernScapes Loading icon">
-	</div>
-
-	<script>
-		localStorage = window.localStorage;
-		const visited = localStorage.getItem('visited');
-		if (!visited) {
-			document.getElementById('preloader').style.display = "block";
-			document.addEventListener("DOMContentLoaded", () => {
-				document.getElementById('preloader').style.display = "none";
-			});
-		}
-		localStorage.setItem('visited', true);
-	</script>
-
 	<div class="main-container">
 		<header>
 			<div id="headerContent">
