@@ -2,25 +2,33 @@
 <html class="no-js" lang="">
 
 <head>
+	<!-- Google Analytics: -->
+	<script>
+		window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+		ga('create', 'UA-152621464-2', 'auto'); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+	</script>
+	<script src="https://www.google-analytics.com/analytics.js" async></script>
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#fafafa">
 
 	<link rel="manifest" href="/site.webmanifest">
-	<link rel="apple-touch-icon" href="/icon-192.png">	
+	<link rel="apple-touch-icon" href="/icon-192.png">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-	
+
 	<title>About | SouthernScapes</title>
 	<meta name="description"
-	content="SouthernScapes Landscape & Irrigation is a landscape company in Northwest Arkansas that caters to all sides of the landscaping world. From irrigation repairs to patios, SouthernScapes does it all.">
+		content="SouthernScapes Landscape & Irrigation is a landscape company in Northwest Arkansas that caters to all sides of the landscaping world. From irrigation repairs to patios, SouthernScapes does it all.">
 
 	<!-- Facebook Meta Tags -->
 	<meta property="og:url" content="https://www.southernscapesnwa.com/about.html">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="About | SouthernScapes">
-	<meta property="og:description" content="SouthernScapes Landscape & Irrigation is a landscape company in Northwest Arkansas that caters to all sides of the landscaping world. From irrigation repairs to patios, SouthernScapes does it all.">
+	<meta property="og:description"
+		content="SouthernScapes Landscape & Irrigation is a landscape company in Northwest Arkansas that caters to all sides of the landscaping world. From irrigation repairs to patios, SouthernScapes does it all.">
 	<meta property="og:image" content="https://southernscapesnwa.com/images/logo-color.png">
 
 	<!-- Twitter Meta Tags -->
@@ -28,20 +36,76 @@
 	<meta property="twitter:domain" content="southernscapesnwa.com">
 	<meta property="twitter:url" content="https://www.southernscapesnwa.com/about.html">
 	<meta name="twitter:title" content="About | SouthernScapes">
-	<meta name="twitter:description" content="SouthernScapes Landscape & Irrigation is a landscape company in Northwest Arkansas that caters to all sides of the landscaping world. From irrigation repairs to patios, SouthernScapes does it all.">
+	<meta name="twitter:description"
+		content="SouthernScapes Landscape & Irrigation is a landscape company in Northwest Arkansas that caters to all sides of the landscaping world. From irrigation repairs to patios, SouthernScapes does it all.">
 	<meta name="twitter:image" content="https://southernscapesnwa.com/images/logo-color.png">
 </head>
 
 <body>
-	<div id="preloader" style="width:100%;height:100%;position:absolute;z-index:999;;background-color:white;">
+	<div id="preloader" style="display:none;width:100%;height:100%;position:absolute;z-index:999;;background-color:white;">
 		<img src="images/animated-icon.gif"
 			style="width:150px;height:150px;position:fixed;top:50vh;left:50vw;margin-top:-75px;margin-left:-75px;"
 			alt="SouthernScapes Loading icon">
 	</div>
 
-	<div class="main-container" style="display: none;">
+	<script>
+		localStorage = window.localStorage;
+		const visited = localStorage.getItem('visited');
+		if (!visited) {
+			document.getElementById('preloader').style.display = "block";
+			document.addEventListener("DOMContentLoaded", () => {
+				document.getElementById('preloader').style.display = "none";
+			});
+		}
+		localStorage.setItem('visited', true);
+	</script>
+
+	<div class="main-container">
 		<header>
-			<div id="headerContent"></div>
+			<div id="headerContent">
+				<div>
+					<a href="/"><img class="header-logo" src="/images/logo-horizontal.svg" alt="SouthernScapes logo"></a>
+				</div>
+
+				<div class="hamburger-icon" onclick="hamburgerIconClick()">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+
+				<div class="desktop-menu">
+					<nav>
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/commercial.html">Commercial</a></li>
+							<li><a href="/residential.html">Residential</a></li>
+							<li><a href="/about.html">About</a></li>
+							<li><a href="/contact.html">Contact</a></li>
+							<li><a href="https://www.facebook.com/pg/southernscapesnwa/reviews/?ref=page_internal"><img
+										src="/images/facebook-logo.png" style="max-width: unset;" alt="Facebook logo"></a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="mobile-menu-container" id="mobile-menu-container">
+					<div class="mobile-menu-outside" onclick="hamburgerIconClick()"></div>
+					<div class="mobile-menu" id="mobile-menu">
+						<nav class="mobile-menu-nav">
+							<ul>
+								<li class="mobile-menu-li"><a href="/">Home</a></li>
+								<li class="mobile-menu-li"><a href="/commercial.html">Commercial</a></li>
+								<li class="mobile-menu-li"><a href="/residential.html">Residential</a></li>
+								<li class="mobile-menu-li"><a href="/about.html">About</a></li>
+								<li class="mobile-menu-li"><a href="/contact.html">Contact</a></li>
+								<li><a href="https://www.facebook.com/pg/southernscapesnwa/reviews/?ref=page_internal"><img
+											src="/images/facebook-logo.png" style="max-width: unset;" alt="Facebook logo"></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+				<script> function hamburgerIconClick() { document.getElementById('headerContent').classList.toggle("hamburger-icon-click"); }</script>
+			</div>
 		</header>
 
 		<section>
@@ -95,20 +159,36 @@
 				<p>...and More!</p>
 				<button onclick="document.location.href = '/contact.html';">Contact Us</button>
 			</div>
-
 		</section>
 
 		<footer>
-			<div id="footerContent"></div>
+			<div id="footerContent">
+				<div class="footer-container">
+					<div class="footer-image-container">
+						<a href="/"><img src="/images/logo-vertical.svg" alt="SouthernScapes logo"></a>
+					</div>
+					<div>
+						<p>SouthernScapes Landscape and Irrigation<br>
+							<a href="tel:+14794453083">1 (479) 445-3083</a><br>
+							<a style="word-break: break-all;"
+								href="mailto:sstilwell.southernscapes@gmail.com">sstilwell.southernscapes@gmail.com</a><br>
+						</p>
+					</div>
+					<div>
+						<p>
+							Copyright ©2020 SouthernScapes Landscape and Irrigation.<br>
+							All rights reserved.<br>
+							<a href="https://www.facebook.com/pg/southernscapesnwa/reviews/?ref=page_internal"><img
+									src="/images/facebook-logo.png" style="max-width: unset;" alt="Facebook logo"></a>
+						</p>
+					</div>
+					<div class="footer-image-container">
+						<a href="https://www.loganrdavis.com"><img src="/images/lrd-tag.svg" alt="www.loganrdavis.com tag"></a>
+					</div>
+				</div>
+			</div>
 		</footer>
 	</div>
-
-	<script src="js/vendor/modernizr-3.8.0.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
 </body>
 
 </html>
